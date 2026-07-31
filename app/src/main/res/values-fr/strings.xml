@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Tesla Nav</string>
+    <string name="accessibility_service_description">Détecte quelle application est actuellement au premier plan.</string>
+
+    <!-- Commun -->
+    <string name="back">Retour</string>
+    <string name="error_prefix">Erreur: %1$s</string>
+    <string name="unknown_error">Erreur inconnue</string>
+
+    <!-- Accueil -->
+    <string name="home_title">Accueil</string>
+    <string name="tesla_card_title">Tesla</string>
+    <string name="tesla_not_configured">Non configuré — client_id/client_secret manquants</string>
+    <string name="tesla_not_connected">Non connecté</string>
+    <string name="tesla_connected_no_vehicle">Connecté — aucun véhicule sélectionné</string>
+    <string name="tesla_connected_vehicle">Connecté — %1$s</string>
+    <string name="map_card_title">Map</string>
+    <string name="map_no_app_chosen">Aucune app choisie</string>
+    <string name="map_polling_auto">auto (45s)</string>
+    <string name="map_polling_manual">manuelle</string>
+    <string name="map_card_value">%1$s — mise à jour %2$s</string>
+
+    <!-- Paramètres -->
+    <string name="settings_title">Paramètres</string>
+    <string name="polling_section_title">Mise à jour automatique</string>
+    <string name="polling_description">Interroge la voiture toutes les 45s pour détecter une nouvelle destination. Sinon, mise à jour manuelle via la bulle overlay.</string>
+    <string name="polling_toast">Mise à jour automatique %1$s</string>
+    <string name="polling_status_enabled">activée</string>
+    <string name="polling_status_disabled">désactivée</string>
+    <string name="tts_section_title">Annonces vocales</string>
+    <string name="tts_description">Signale à voix haute la perte et le retour de la connexion internet (utile pour savoir si Waze est à jour).</string>
+    <string name="tts_test_button">Tester</string>
+    <string name="tts_test_message">Test des annonces vocales Tesla Nav</string>
+    <string name="tts_toast">Annonces vocales %1$s</string>
+    <string name="tts_status_enabled">activées (redémarre le service pour appliquer)</string>
+    <string name="tts_status_disabled">désactivées</string>
+    <string name="nav_app_section_title">Application de navigation</string>
+    <string name="nav_app_installed">Installée</string>
+    <string name="nav_app_not_installed">Non installée</string>
+    <string name="nav_app_selected_toast">App de navigation: %1$s</string>
+    <string name="nav_app_selected_not_installed_toast">%1$s sélectionnée, mais elle n\'est pas installée</string>
+
+    <!-- Écran Tesla -->
+    <string name="tesla_config_section_title">App Tesla (developer.tesla.com)</string>
+    <string name="tesla_config_description">Identifiants de l\'app enregistrée sur developer.tesla.com — jamais inclus dans le build, saisis ici et stockés uniquement sur cet appareil.</string>
+    <string name="client_id_label">client_id</string>
+    <string name="client_secret_label">client_secret</string>
+    <string name="tesla_config_missing_warning">Renseigne le client_id et le client_secret ci-dessus avant de te connecter.</string>
+    <string name="connexion_section_title">Connexion</string>
+    <string name="login_button">Se connecter avec Tesla</string>
+    <string name="login_waiting">En attente de la connexion dans le navigateur...</string>
+    <string name="login_retry_button">Réessayer</string>
+    <string name="login_success">Connecté avec succès !</string>
+    <string name="login_success_toast">Connecté avec succès</string>
+    <string name="login_failed_toast">Échec de connexion: %1$s</string>
+    <string name="login_reconnect_button">Se reconnecter</string>
+    <string name="token_expiry_known">Token d\'accès %1$s</string>
+    <string name="token_expiry_unknown">Expiration du token inconnue</string>
+    <string name="token_expiry_future">expire dans %1$s</string>
+    <string name="token_expiry_past">expiré depuis %1$s</string>
+    <string name="duration_hours_minutes">%1$dh %2$dmin</string>
+    <string name="duration_minutes">%1$dmin</string>
+    <string name="vehicle_section_title">Véhicule</string>
+    <string name="load_vehicles_button">Charger les véhicules</string>
+    <string name="refresh_button">Rafraîchir</string>
+    <string name="vehicle_selected_toast">Véhicule sélectionné: %1$s</string>
+    <string name="no_client_id_configured">Aucun client_id Tesla configuré (écran Tesla).</string>
+    <string name="no_code_param">Aucun paramètre \'code\' reçu du callback.</string>
+    <string name="auth_refused">Tesla a refusé la connexion : %1$s</string>
+    <string name="state_mismatch">Le paramètre \'state\' ne correspond pas — abandon par sécurité.</string>
+    <string name="loopback_timeout">Aucune réponse reçue depuis le navigateur (timeout).</string>
+    <string name="callback_success_message">Connexion Tesla réussie, tu peux fermer cet onglet et revenir dans l\'app.</string>
+
+    <!-- Résultats de synchro (partagés overlay + service) -->
+    <string name="sync_destination_opened">Destination envoyée: %1$s</string>
+    <string name="sync_destination_no_name">sans nom</string>
+    <string name="sync_destination_unchanged">Destination déjà à jour</string>
+    <string name="sync_no_active_destination">Aucune destination active dans la voiture</string>
+    <string name="sync_vehicle_asleep">La voiture est en veille, réveille-la pour récupérer la destination</string>
+    <string name="sync_no_vehicle_selected">Aucun véhicule sélectionné (écran Tesla)</string>
+    <string name="sync_no_nav_app">Aucune app de navigation choisie (Paramètres)</string>
+    <string name="sync_error_update">Erreur de mise à jour: %1$s</string>
+    <string name="sync_retrieving">Récupération de la destination...</string>
+    <string name="sync_no_token">Aucun token Tesla configuré.</string>
+    <string name="sync_no_client_credentials">Aucun client_id/client_secret Tesla configuré (écran Tesla).</string>
+    <string name="token_expired_no_refresh">Token expiré et aucun refresh token disponible.</string>
+
+    <!-- Notification / TTS / autres -->
+    <string name="notification_tracking">Suivi de %1$s</string>
+    <string name="tts_internet_lost">Connexion internet perdue</string>
+    <string name="tts_internet_restored">Connexion internet rétablie</string>
+    <string name="app_not_installed_toast">%1$s n\'est pas installé.</string>
+</resources>

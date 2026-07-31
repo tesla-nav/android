@@ -1,3 +1,93 @@
 <resources>
     <string name="app_name">Tesla Nav</string>
+    <string name="accessibility_service_description">Detects which app is currently in the foreground.</string>
+
+    <!-- Common -->
+    <string name="back">Back</string>
+    <string name="error_prefix">Error: %1$s</string>
+    <string name="unknown_error">Unknown error</string>
+
+    <!-- Home -->
+    <string name="home_title">Home</string>
+    <string name="tesla_card_title">Tesla</string>
+    <string name="tesla_not_configured">Not configured — client_id/client_secret missing</string>
+    <string name="tesla_not_connected">Not connected</string>
+    <string name="tesla_connected_no_vehicle">Connected — no vehicle selected</string>
+    <string name="tesla_connected_vehicle">Connected — %1$s</string>
+    <string name="map_card_title">Map</string>
+    <string name="map_no_app_chosen">No app chosen</string>
+    <string name="map_polling_auto">auto (45s)</string>
+    <string name="map_polling_manual">manual</string>
+    <string name="map_card_value">%1$s — %2$s updates</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="polling_section_title">Automatic updates</string>
+    <string name="polling_description">Polls the car every 45s to detect a new destination. Otherwise, update manually via the overlay bubble.</string>
+    <string name="polling_toast">Automatic updates %1$s</string>
+    <string name="polling_status_enabled">enabled</string>
+    <string name="polling_status_disabled">disabled</string>
+    <string name="tts_section_title">Voice announcements</string>
+    <string name="tts_description">Announces out loud when internet connection is lost or restored (useful to know if Waze is up to date).</string>
+    <string name="tts_test_button">Test</string>
+    <string name="tts_test_message">Tesla Nav voice announcement test</string>
+    <string name="tts_toast">Voice announcements %1$s</string>
+    <string name="tts_status_enabled">enabled (restart the service to apply)</string>
+    <string name="tts_status_disabled">disabled</string>
+    <string name="nav_app_section_title">Navigation app</string>
+    <string name="nav_app_installed">Installed</string>
+    <string name="nav_app_not_installed">Not installed</string>
+    <string name="nav_app_selected_toast">Navigation app: %1$s</string>
+    <string name="nav_app_selected_not_installed_toast">%1$s selected, but it isn\'t installed</string>
+
+    <!-- Tesla screen -->
+    <string name="tesla_config_section_title">Tesla app (developer.tesla.com)</string>
+    <string name="tesla_config_description">Credentials for the app registered on developer.tesla.com — never baked into the build, entered here and stored only on this device.</string>
+    <string name="client_id_label">client_id</string>
+    <string name="client_secret_label">client_secret</string>
+    <string name="tesla_config_missing_warning">Fill in the client_id and client_secret above before logging in.</string>
+    <string name="connexion_section_title">Login</string>
+    <string name="login_button">Log in with Tesla</string>
+    <string name="login_waiting">Waiting for the browser login...</string>
+    <string name="login_retry_button">Retry</string>
+    <string name="login_success">Logged in successfully!</string>
+    <string name="login_success_toast">Logged in successfully</string>
+    <string name="login_failed_toast">Login failed: %1$s</string>
+    <string name="login_reconnect_button">Log in again</string>
+    <string name="token_expiry_known">Access token %1$s</string>
+    <string name="token_expiry_unknown">Token expiry unknown</string>
+    <string name="token_expiry_future">expires in %1$s</string>
+    <string name="token_expiry_past">expired %1$s ago</string>
+    <string name="duration_hours_minutes">%1$dh %2$dmin</string>
+    <string name="duration_minutes">%1$dmin</string>
+    <string name="vehicle_section_title">Vehicle</string>
+    <string name="load_vehicles_button">Load vehicles</string>
+    <string name="refresh_button">Refresh</string>
+    <string name="vehicle_selected_toast">Vehicle selected: %1$s</string>
+    <string name="no_client_id_configured">No Tesla client_id configured (Tesla screen).</string>
+    <string name="no_code_param">No \'code\' parameter received from the callback.</string>
+    <string name="auth_refused">Tesla refused the login: %1$s</string>
+    <string name="state_mismatch">The \'state\' parameter doesn\'t match — aborting for safety.</string>
+    <string name="loopback_timeout">No response received from the browser (timeout).</string>
+    <string name="callback_success_message">Tesla login successful, you can close this tab and go back to the app.</string>
+
+    <!-- Sync results (shared between overlay + service) -->
+    <string name="sync_destination_opened">Destination sent: %1$s</string>
+    <string name="sync_destination_no_name">unnamed</string>
+    <string name="sync_destination_unchanged">Destination already up to date</string>
+    <string name="sync_no_active_destination">No active destination in the car</string>
+    <string name="sync_vehicle_asleep">The car is asleep, wake it up to retrieve the destination</string>
+    <string name="sync_no_vehicle_selected">No vehicle selected (Tesla screen)</string>
+    <string name="sync_no_nav_app">No navigation app chosen (Settings)</string>
+    <string name="sync_error_update">Update error: %1$s</string>
+    <string name="sync_retrieving">Retrieving destination...</string>
+    <string name="sync_no_token">No Tesla token configured.</string>
+    <string name="sync_no_client_credentials">No Tesla client_id/client_secret configured (Tesla screen).</string>
+    <string name="token_expired_no_refresh">Token expired and no refresh token available.</string>
+
+    <!-- Notification / TTS / other -->
+    <string name="notification_tracking">Tracking %1$s</string>
+    <string name="tts_internet_lost">Internet connection lost</string>
+    <string name="tts_internet_restored">Internet connection restored</string>
+    <string name="app_not_installed_toast">%1$s is not installed.</string>
 </resources>
