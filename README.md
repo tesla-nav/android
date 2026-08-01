@@ -19,11 +19,22 @@ Uses the official Fleet API (legacy `owner-api` is dead since mid-2026). No app 
    ```
    https://<your-domain>/.well-known/appspecific/com.tesla.3p.public-key.pem
    ```
+   Easiest: [`scripts/SetupKeyHosting.java`](scripts/SetupKeyHosting.java) — generates the key pair and
+   publishes the public half to your own GitHub Pages (`<your-github-username>.github.io` by default; pass
+   `owner/repo` to target something else). No dependency beyond the JDK - talks to the GitHub REST API
+   directly with a personal access token (`GITHUB_TOKEN`, `repo` scope). Each person running this app hosts
+   their own key on their own domain — nothing here points at tesla-nav's.
+   ```bash
+   export GITHUB_TOKEN=ghp_...
+   java scripts/SetupKeyHosting.java
+   ```
+   Or by hand:
    ```bash
    openssl ecparam -name prime256v1 -genkey -noout -out private-key.pem
    openssl ec -in private-key.pem -pubout -out public-key.pem
    ```
-   - GitHub Pages: add `.nojekyll` at the root, or `.well-known` 404s.
+   - GitHub Pages: add `.nojekyll` at the root, or `.well-known` 404s. Must be at the domain root — a
+     project page (`<user>.github.io/<repo>/...`) won't work, use a user/org page repo instead.
    - Never commit/share the private key — the app is read-only, doesn't need it.
 
 3. **Set runtime config** — `client_id`/`client_secret` are never baked into the APK, only stored in `SharedPreferences` (`SettingsManager`):
